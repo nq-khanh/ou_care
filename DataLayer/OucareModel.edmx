@@ -18,11 +18,14 @@
         </EntityType>
         <EntityType Name="BillDetails">
           <Key>
-            <PropertyRef Name="medID" />
-            <PropertyRef Name="billID" />
+            <PropertyRef Name="ID" />
           </Key>
-          <Property Name="medID" Type="int" Nullable="false" />
-          <Property Name="billID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="billID" Type="int" />
+          <Property Name="medID" Type="int" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="unitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -141,7 +144,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__BillDetai__billI__571DF1D5">
-          <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+          <End Role="Bill" Type="Self.Bill" Multiplicity="0..1" />
           <End Role="BillDetails" Type="Self.BillDetails" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Bill">
@@ -153,7 +156,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__BillDetai__medID__5812160E">
-          <End Role="Medicine" Type="Self.Medicine" Multiplicity="1" />
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="0..1" />
           <End Role="BillDetails" Type="Self.BillDetails" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Medicine">
@@ -306,7 +309,20 @@
           <Property Name="qrLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Customer" Relationship="Self.FK__Bill__cusID__534D60F1" FromRole="Bill" ToRole="Customer" />
           <NavigationProperty Name="User" Relationship="Self.FK__Bill__userID__5441852A" FromRole="Bill" ToRole="User" />
-          <NavigationProperty Name="Medicines" Relationship="Self.BillDetails" FromRole="Bill" ToRole="Medicine" />
+          <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__billI__571DF1D5" FromRole="Bill" ToRole="BillDetails" />
+        </EntityType>
+        <EntityType Name="BillDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="billID" Type="Int32" />
+          <Property Name="medID" Type="Int32" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="unitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Bill" Relationship="Self.FK__BillDetai__billI__571DF1D5" FromRole="BillDetails" ToRole="Bill" />
+          <NavigationProperty Name="Medicine" Relationship="Self.FK__BillDetai__medID__5812160E" FromRole="BillDetails" ToRole="Medicine" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -345,9 +361,9 @@
           <Property Name="createdDate" Type="DateTime" Precision="3" />
           <Property Name="lastUpdated" Type="DateTime" Precision="3" />
           <Property Name="groupID" Type="Int32" />
+          <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__medID__5812160E" FromRole="Medicine" ToRole="BillDetails" />
           <NavigationProperty Name="MedicineGroup" Relationship="Self.FK__Medicine__groupI__4AB81AF0" FromRole="Medicine" ToRole="MedicineGroup" />
           <NavigationProperty Name="MedicineBatchDetails" Relationship="Self.FK__MedicineB__medID__4F7CD00D" FromRole="Medicine" ToRole="MedicineBatchDetails" />
-          <NavigationProperty Name="Bills" Relationship="Self.BillDetails" FromRole="Medicine" ToRole="Bill" />
         </EntityType>
         <EntityType Name="MedicineBatch">
           <Key>
@@ -439,6 +455,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__BillDetai__billI__571DF1D5">
+          <End Role="Bill" Type="Self.Bill" Multiplicity="0..1" />
+          <End Role="BillDetails" Type="Self.BillDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bill">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BillDetails">
+              <PropertyRef Name="billID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BillDetai__medID__5812160E">
+          <End Role="Medicine" Type="Self.Medicine" Multiplicity="0..1" />
+          <End Role="BillDetails" Type="Self.BillDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medicine">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="BillDetails">
+              <PropertyRef Name="medID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Notificat__cusID__440B1D61">
           <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
           <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
@@ -511,12 +551,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="BillDetails">
-          <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
-          <End Role="Medicine" Type="Self.Medicine" Multiplicity="*" />
-        </Association>
-        <EntityContainer Name="OUCareEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="OUCareDBContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Bills" EntityType="Self.Bill" />
+          <EntitySet Name="BillDetails" EntityType="Self.BillDetail" />
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="Logs" EntityType="Self.Log" />
           <EntitySet Name="Medicines" EntityType="Self.Medicine" />
@@ -533,6 +570,14 @@
           <AssociationSet Name="FK__Bill__userID__5441852A" Association="Self.FK__Bill__userID__5441852A">
             <End Role="User" EntitySet="Users" />
             <End Role="Bill" EntitySet="Bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillDetai__billI__571DF1D5" Association="Self.FK__BillDetai__billI__571DF1D5">
+            <End Role="Bill" EntitySet="Bills" />
+            <End Role="BillDetails" EntitySet="BillDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BillDetai__medID__5812160E" Association="Self.FK__BillDetai__medID__5812160E">
+            <End Role="Medicine" EntitySet="Medicines" />
+            <End Role="BillDetails" EntitySet="BillDetails" />
           </AssociationSet>
           <AssociationSet Name="FK__Notificat__cusID__440B1D61" Association="Self.FK__Notificat__cusID__440B1D61">
             <End Role="Customer" EntitySet="Customers" />
@@ -558,17 +603,13 @@
             <End Role="Role" EntitySet="Roles" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
-          <AssociationSet Name="BillDetails" Association="Self.BillDetails">
-            <End Role="Bill" EntitySet="Bills" />
-            <End Role="Medicine" EntitySet="Medicines" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="OUCareModelStoreContainer" CdmEntityContainer="OUCareEntities">
+        <EntityContainerMapping StorageEntityContainer="OUCareModelStoreContainer" CdmEntityContainer="OUCareDBContext">
           <EntitySetMapping Name="Bills">
             <EntityTypeMapping TypeName="OUCareModel.Bill">
               <MappingFragment StoreEntitySet="Bill">
@@ -578,6 +619,18 @@
                 <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="billDate" ColumnName="billDate" />
                 <ScalarProperty Name="qrLink" ColumnName="qrLink" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BillDetails">
+            <EntityTypeMapping TypeName="OUCareModel.BillDetail">
+              <MappingFragment StoreEntitySet="BillDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="billID" ColumnName="billID" />
+                <ScalarProperty Name="medID" ColumnName="medID" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="unitPrice" ColumnName="unitPrice" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -681,14 +734,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="BillDetails" TypeName="OUCareModel.BillDetails" StoreEntitySet="BillDetails">
-            <EndProperty Name="Bill">
-              <ScalarProperty Name="ID" ColumnName="billID" />
-            </EndProperty>
-            <EndProperty Name="Medicine">
-              <ScalarProperty Name="ID" ColumnName="medID" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

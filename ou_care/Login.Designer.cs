@@ -108,6 +108,7 @@
             this.checkPw.TabIndex = 16;
             this.checkPw.Text = "Hiện mật khẩu";
             this.checkPw.UseVisualStyleBackColor = true;
+            this.checkPw.CheckedChanged += new System.EventHandler(this.checkPw_CheckedChanged);
             // 
             // ll_39_Khanh
             // 
@@ -176,6 +177,7 @@
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPw
             // 
@@ -214,12 +216,13 @@
             this.btExit.BackColor = System.Drawing.Color.Transparent;
             this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExit.ForeColor = System.Drawing.Color.Navy;
-            this.btExit.Location = new System.Drawing.Point(683, 0);
+            this.btExit.Location = new System.Drawing.Point(665, 0);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(67, 47);
             this.btExit.TabIndex = 6;
             this.btExit.Text = "X";
             this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // txtUsername
             // 
