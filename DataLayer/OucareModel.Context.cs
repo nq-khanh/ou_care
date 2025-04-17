@@ -13,19 +13,20 @@ namespace DataLayer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OUCareEntities : DbContext
+    public partial class OUCareDBContext : DbContext
     {
-        public OUCareEntities()
-            : base("name=OUCareEntities")
+        public OUCareDBContext()
+            : base("name=OUCareDBContext")
         {
         }
     
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    throw new UnintentionalCodeFirstException();
+        //}
     
         public virtual DbSet<Bill> Bills { get; set; }
+        public virtual DbSet<BillDetail> BillDetails { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Log> Logs { get; set; }
         public virtual DbSet<Medicine> Medicines { get; set; }
@@ -34,6 +35,7 @@ namespace DataLayer
         public virtual DbSet<MedicineGroup> MedicineGroups { get; set; }
         public virtual DbSet<Notification> Notifications { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }
