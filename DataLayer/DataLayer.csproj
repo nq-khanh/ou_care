@@ -53,15 +53,17 @@
     <Compile Include="Bill.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="BillDAO.cs" />
-    <Compile Include="BillDetail.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BillDetailsDAO.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="Customer.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
+<Compile Include="BillDAO.cs" />
+<Compile Include="BillDetail.cs">
+  <DependentUpon>OucareModel.tt</DependentUpon>
+</Compile>
+<Compile Include="BillDetailsDAO.cs" />
+<Compile Include="Class1.cs" />
+<Compile Include="Customer.cs">
+  <DependentUpon>OucareModel.tt</DependentUpon>
+</Compile>
+<Compile Include="DataProvider.cs" />
+
     <Compile Include="Log.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
@@ -74,7 +76,9 @@
     <Compile Include="MedicineBatchDetail.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
+
     <Compile Include="MedicineDAO.cs" />
+
     <Compile Include="MedicineGroup.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
@@ -100,9 +104,11 @@
     <Compile Include="Role.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
+
     <Compile Include="sysdiagram.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
+
     <Compile Include="User.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
