@@ -78,6 +78,28 @@
     <Compile Include="Notification.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>OucareModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs">
+      <DependentUpon>OucareModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medicine.cs">
+      <DependentUpon>OucareModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicineBatch.cs">
+      <DependentUpon>OucareModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicineBatchDetail.cs">
+      <DependentUpon>OucareModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicineDAO.cs" />
+    <Compile Include="MedicineGroup.cs">
+      <DependentUpon>OucareModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <DependentUpon>OucareModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="OucareModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

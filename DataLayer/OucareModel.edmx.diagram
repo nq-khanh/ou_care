@@ -15,6 +15,7 @@
         <EntityTypeShape EntityType="OUCareModel.MedicineGroup" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="OUCareModel.Notification" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="OUCareModel.Role" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OUCareModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="OUCareModel.User" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="OUCareModel.FK__Bill__cusID__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="OUCareModel.FK__Bill__userID__5441852A" ManuallyRouted="false" />

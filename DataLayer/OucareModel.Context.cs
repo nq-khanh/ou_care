@@ -35,6 +35,7 @@ namespace DataLayer
         public virtual DbSet<MedicineGroup> MedicineGroups { get; set; }
         public virtual DbSet<Notification> Notifications { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }
