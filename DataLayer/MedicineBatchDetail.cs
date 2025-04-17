@@ -14,12 +14,9 @@ namespace DataLayer
     
     public partial class MedicineBatchDetail
     {
-        public int ID { get; set; }
-        public Nullable<int> medID { get; set; }
-        public Nullable<int> batchID { get; set; }
-        public int quantityImported { get; set; }
-        public decimal importPrice { get; set; }
-        public System.DateTime importDate { get; set; }
+        public int medID { get; set; }
+        public int batchID { get; set; }
+        public Nullable<int> quantityImported { get; set; }
     
         public virtual Medicine Medicine { get; set; }
         public virtual MedicineBatch MedicineBatch { get; set; }

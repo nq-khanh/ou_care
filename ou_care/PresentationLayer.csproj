@@ -35,9 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,30 +52,6 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminUC\AddUser_UC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminUC\AddUser_UC.Designer.cs">
-      <DependentUpon>AddUser_UC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminUC\Dashboard_UC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminUC\Dashboard_UC.Designer.cs">
-      <DependentUpon>Dashboard_UC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminUC\Profile_UC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminUC\Profile_UC.Designer.cs">
-      <DependentUpon>Profile_UC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminUC\ViewUser_UC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminUC\ViewUser_UC.Designer.cs">
-      <DependentUpon>ViewUser_UC.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,21 +66,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminUC\AddUser_UC.resx">
-      <DependentUpon>AddUser_UC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminUC\Dashboard_UC.resx">
-      <DependentUpon>Dashboard_UC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminUC\Profile_UC.resx">
-      <DependentUpon>Profile_UC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminUC\ViewUser_UC.resx">
-      <DependentUpon>ViewUser_UC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,15 +99,10 @@
       <Project>{aae7b967-ee3b-4ee3-86f3-f71bfeff84d0}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
-      <Project>{0946d7e5-5e16-48ba-8c43-98beed7da5d8}</Project>
-      <Name>DataLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TransferObject\TransferObject.csproj">
       <Project>{2d14d6fd-8b44-4e2a-9ae2-bc9f37becbb3}</Project>
       <Name>TransferObject</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

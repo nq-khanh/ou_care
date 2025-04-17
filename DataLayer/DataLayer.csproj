@@ -50,65 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bill.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BillDetail.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataProvider.cs" />
-    <Compile Include="Log.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Medicine.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MedicineBatch.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MedicineBatchDetail.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MedicineGroup.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Notification.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Customer.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Log.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Medicine.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MedicineBatch.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MedicineBatchDetail.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MedicineDAO.cs" />
-    <Compile Include="MedicineGroup.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Notification.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="OucareModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OucareModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OucareModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
     <Compile Include="OucareModel.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -116,12 +62,6 @@
       <DependentUpon>OucareModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>OucareModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransferObject\TransferObject.csproj">
@@ -130,30 +70,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
     <EntityDeploy Include="OucareModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>OucareModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
     <None Include="OucareModel.edmx.diagram">
       <DependentUpon>OucareModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="OucareModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OucareModel.edmx</DependentUpon>
       <LastGenOutput>OucareModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="OucareModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OucareModel.edmx</DependentUpon>
-      <LastGenOutput>OucareModel.cs</LastGenOutput>
-    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
