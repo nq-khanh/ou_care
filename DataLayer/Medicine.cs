@@ -17,8 +17,8 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Medicine()
         {
+            this.BillDetails = new HashSet<BillDetail>();
             this.MedicineBatchDetails = new HashSet<MedicineBatchDetail>();
-            this.Bills = new HashSet<Bill>();
         }
     
         public int ID { get; set; }
@@ -32,10 +32,10 @@ namespace DataLayer
         public Nullable<System.DateTime> lastUpdated { get; set; }
         public Nullable<int> groupID { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BillDetail> BillDetails { get; set; }
         public virtual MedicineGroup MedicineGroup { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MedicineBatchDetail> MedicineBatchDetails { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bill> Bills { get; set; }
     }
 }

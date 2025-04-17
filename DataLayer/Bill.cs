@@ -17,7 +17,7 @@ namespace DataLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Bill()
         {
-            this.Medicines = new HashSet<Medicine>();
+            this.BillDetails = new HashSet<BillDetail>();
         }
     
         public int ID { get; set; }
@@ -30,6 +30,6 @@ namespace DataLayer
         public virtual Customer Customer { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Medicine> Medicines { get; set; }
+        public virtual ICollection<BillDetail> BillDetails { get; set; }
     }
 }
