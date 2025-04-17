@@ -57,6 +57,7 @@ namespace DataLayer
             }
         }
 
+        // Thực hiện câu truy vấn trên DB và trả dữ liệu về 
         public object MyExcuteScalar(string sql, CommandType type, SqlParameter[] parameters = null)
         {
             try

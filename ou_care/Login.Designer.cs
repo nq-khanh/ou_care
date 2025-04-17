@@ -62,7 +62,7 @@
             this.panel1_39_Khanh.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1_39_Khanh.Location = new System.Drawing.Point(0, 0);
             this.panel1_39_Khanh.Name = "panel1_39_Khanh";
-            this.panel1_39_Khanh.Size = new System.Drawing.Size(294, 483);
+            this.panel1_39_Khanh.Size = new System.Drawing.Size(294, 527);
             this.panel1_39_Khanh.TabIndex = 17;
             // 
             // picLogo39_Khanh
@@ -102,7 +102,7 @@
             // 
             this.checkPw.AutoSize = true;
             this.checkPw.ForeColor = System.Drawing.Color.Navy;
-            this.checkPw.Location = new System.Drawing.Point(614, 319);
+            this.checkPw.Location = new System.Drawing.Point(606, 319);
             this.checkPw.Name = "checkPw";
             this.checkPw.Size = new System.Drawing.Size(114, 20);
             this.checkPw.TabIndex = 16;
@@ -188,6 +188,7 @@
             this.txtPw.PasswordChar = '*';
             this.txtPw.Size = new System.Drawing.Size(358, 35);
             this.txtPw.TabIndex = 16;
+            this.txtPw.TextChanged += new System.EventHandler(this.txtPw_TextChanged);
             // 
             // picUser_39_Khanh
             // 
@@ -216,7 +217,7 @@
             this.btExit.BackColor = System.Drawing.Color.Transparent;
             this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExit.ForeColor = System.Drawing.Color.Navy;
-            this.btExit.Location = new System.Drawing.Point(665, 0);
+            this.btExit.Location = new System.Drawing.Point(689, 0);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(67, 47);
             this.btExit.TabIndex = 6;
@@ -249,14 +250,14 @@
             this.panel2_39_Khanh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2_39_Khanh.Location = new System.Drawing.Point(0, 0);
             this.panel2_39_Khanh.Name = "panel2_39_Khanh";
-            this.panel2_39_Khanh.Size = new System.Drawing.Size(732, 483);
+            this.panel2_39_Khanh.Size = new System.Drawing.Size(756, 527);
             this.panel2_39_Khanh.TabIndex = 18;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 483);
+            this.ClientSize = new System.Drawing.Size(756, 527);
             this.Controls.Add(this.panel1_39_Khanh);
             this.Controls.Add(this.txtPw);
             this.Controls.Add(this.txtUsername);
@@ -265,6 +266,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1_39_Khanh.ResumeLayout(false);
             this.panel1_39_Khanh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo39_Khanh)).EndInit();

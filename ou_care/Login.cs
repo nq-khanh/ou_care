@@ -11,7 +11,6 @@ using TransferObject;
 
 using BusinessLayer;
 
-
 namespace ou_care
 {
     public partial class Login : Form
@@ -28,12 +27,17 @@ namespace ou_care
         {
             try
             {
-                // Gọi đến UserService để kiểm tra đăng nhập
-                return userService.IsUserLogin(account);
+                return userService.IsUserLogin_ORM(account);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi đăng nhập: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Hiển thị chi tiết lỗi bao gồm inner exception
+                string errorMessage = ex.Message;
+                if (ex.InnerException != null)
+                {
+                    errorMessage += "\nInner Exception: " + ex.InnerException.Message;
+                }
+                MessageBox.Show("Lỗi khi đăng nhập: " + errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -50,8 +54,10 @@ namespace ou_care
 
             if(isUserLogin(account))
             {
-                MessageBox.Show("Đăng nhập thành công", "Login");
-                this.DialogResult = DialogResult.OK;
+                // Hiện form admin (chưa kiểm tra xem là role nào)
+                Admin ad = new Admin();
+                ad.Show();
+                this.Hide();
             }
             else
             {
@@ -79,6 +85,17 @@ namespace ou_care
         private void btExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtPw_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtUsername.Text = "Admin01";
+            txtPw.Text = "Admin123";
         }
     }
 }
