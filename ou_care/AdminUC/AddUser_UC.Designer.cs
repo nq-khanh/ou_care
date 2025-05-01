@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbUserRole = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -77,15 +77,16 @@
             this.btnSignUp.TabIndex = 22;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
-            // comboBox1
+            // cbbUserRole
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(177, 394);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(258, 33);
-            this.comboBox1.TabIndex = 21;
+            this.cbbUserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbUserRole.FormattingEnabled = true;
+            this.cbbUserRole.Location = new System.Drawing.Point(177, 394);
+            this.cbbUserRole.Name = "cbbUserRole";
+            this.cbbUserRole.Size = new System.Drawing.Size(258, 33);
+            this.cbbUserRole.TabIndex = 21;
             // 
             // label5
             // 
@@ -180,7 +181,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSignUp);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbUserRole);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label4);
@@ -204,7 +205,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSignUp;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbUserRole;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;

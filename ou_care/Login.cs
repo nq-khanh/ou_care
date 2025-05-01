@@ -45,6 +45,33 @@ namespace ou_care
         // Khi nút đăng nhập được nhấn
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //string user, pass;
+            //// Lấy dữ liệu từ người dùng
+            //user = txtUsername.Text;
+            //pass = txtPw.Text;
+
+            //Acccount account = new Acccount(user, pass);
+
+            //if(isUserLogin(account))
+            //{
+            //    // Hiện form admin (chưa kiểm tra xem là role nào)
+            //    Admin ad = new Admin();
+            //    ad.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    string msg = "Tài khoản hoặc mật khẩu sai";
+            //    DialogResult result = MessageBox.Show(msg, "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+
+            //    if (result == DialogResult.Retry)
+            //    {
+            //        txtPw.Clear();
+            //        txtPw.Focus();
+            //    }
+            //    else
+            //        this.DialogResult = DialogResult.OK;
+            //}
             string user, pass;
             // Lấy dữ liệu từ người dùng
             user = txtUsername.Text;
@@ -52,25 +79,17 @@ namespace ou_care
 
             Acccount account = new Acccount(user, pass);
 
-            if(isUserLogin(account))
+            bool result = userService.IsUserLogin_ORM(account);
+
+            if (result)
             {
-                // Hiện form admin (chưa kiểm tra xem là role nào)
-                Admin ad = new Admin();
-                ad.Show();
+                Admin adminForm = new Admin(account); // Truyền account vào
                 this.Hide();
+                adminForm.Show();
             }
             else
             {
-                string msg = "Tài khoản hoặc mật khẩu sai";
-                DialogResult result = MessageBox.Show(msg, "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-
-                if (result == DialogResult.Retry)
-                {
-                    txtPw.Clear();
-                    txtPw.Focus();
-                }
-                else
-                    this.DialogResult = DialogResult.OK;
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
             }
         }
 

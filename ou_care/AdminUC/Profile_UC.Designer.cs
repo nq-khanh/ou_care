@@ -28,158 +28,192 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSignUp = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtOldPass = new System.Windows.Forms.TextBox();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtUserRole = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // btnReset
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Profile";
+            this.btnReset.BackColor = System.Drawing.Color.Navy;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(505, 612);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(164, 44);
+            this.btnReset.TabIndex = 35;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(711, 570);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 44);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnSignUp
-            // 
-            this.btnSignUp.BackColor = System.Drawing.Color.Navy;
-            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(499, 570);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(164, 44);
-            this.btnSignUp.TabIndex = 34;
-            this.btnSignUp.Text = "Update";
-            this.btnSignUp.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(553, 99);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(258, 33);
-            this.comboBox1.TabIndex = 33;
+            this.btnUpdate.BackColor = System.Drawing.Color.Navy;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(293, 612);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(164, 44);
+            this.btnUpdate.TabIndex = 34;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(548, 50);
+            this.label5.Location = new System.Drawing.Point(35, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 32;
             this.label5.Text = "User role";
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(553, 313);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(258, 30);
-            this.textBox4.TabIndex = 31;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(40, 447);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(257, 30);
+            this.txtEmail.TabIndex = 31;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(548, 273);
+            this.label4.Location = new System.Drawing.Point(35, 407);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 25);
             this.label4.TabIndex = 30;
             this.label4.Text = "Email";
             // 
-            // textBox3
+            // txtName
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(553, 206);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(258, 30);
-            this.textBox3.TabIndex = 29;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(40, 340);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(257, 30);
+            this.txtName.TabIndex = 29;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(548, 166);
+            this.label3.Location = new System.Drawing.Point(35, 300);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 25);
             this.label3.TabIndex = 28;
             this.label3.Text = "Name";
             // 
-            // textBox2
+            // txtOldPass
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(553, 429);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 30);
-            this.textBox2.TabIndex = 27;
+            this.txtOldPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldPass.Location = new System.Drawing.Point(557, 304);
+            this.txtOldPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOldPass.Multiline = true;
+            this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.Size = new System.Drawing.Size(257, 30);
+            this.txtOldPass.TabIndex = 27;
+            // 
+            // lbUsername
+            // 
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.Location = new System.Drawing.Point(32, 59);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(128, 29);
+            this.lbUsername.TabIndex = 36;
+            this.lbUsername.Text = "username";
+            // 
+            // txtNewPass
+            // 
+            this.txtNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(557, 407);
+            this.txtNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNewPass.Multiline = true;
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(257, 30);
+            this.txtNewPass.TabIndex = 38;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(548, 389);
+            this.label2.Location = new System.Drawing.Point(552, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Password";
+            this.label2.Size = new System.Drawing.Size(132, 25);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Old password";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(159, 448);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(552, 368);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 29);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "username";
+            this.label6.Size = new System.Drawing.Size(140, 25);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "New password";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(32, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(178, 29);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "Welcome back,";
+            // 
+            // txtUserRole
+            // 
+            this.txtUserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserRole.Location = new System.Drawing.Point(37, 231);
+            this.txtUserRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUserRole.Multiline = true;
+            this.txtUserRole.Name = "txtUserRole";
+            this.txtUserRole.ReadOnly = true;
+            this.txtUserRole.Size = new System.Drawing.Size(257, 30);
+            this.txtUserRole.TabIndex = 45;
             // 
             // Profile_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtUserRole);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnSignUp);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNewPass);
+            this.Controls.Add(this.lbUsername);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtOldPass);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Profile_UC";
-            this.Size = new System.Drawing.Size(946, 736);
+            this.Size = new System.Drawing.Size(947, 736);
             this.Load += new System.EventHandler(this.Profile_UC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,18 +221,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnSignUp;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtOldPass;
+        private System.Windows.Forms.Label lbUsername;
+        private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtUserRole;
     }
 }

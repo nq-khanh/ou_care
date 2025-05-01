@@ -10,11 +10,13 @@ namespace TransferObject
     public class UsersDTO
     {
         public int ID { get; set; }
-        public string userName { get; set; }        
+        public string userName { get; set; }      
+        public string passWord { get; set; }
         public string name { get; set; }
         public string email { get; set; }
         public int? roleID { get; set; }
         public DateTime? CreateDate { get; set; }
         public int? IsActive { get; set; } // ?: Cho phép null
+       
     }
 }

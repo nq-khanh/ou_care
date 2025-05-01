@@ -9,15 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using ou_care.AdminUC; // hoặc namespace chứa Dashboard
+using TransferObject; // Them thu vien chua account
 
 
 namespace ou_care
-{
+{   
+
     public partial class Admin : Form
     {
-        public Admin()
+        private Acccount currentAccount;
+
+        public Admin(Acccount account)
         {
             InitializeComponent();
+            currentAccount = account;
         }
 
         // Hàm load Control
@@ -45,7 +50,7 @@ namespace ou_care
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            LoadUserControl(new Profile_UC());
+            LoadUserControl(new Profile_UC(currentAccount));
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

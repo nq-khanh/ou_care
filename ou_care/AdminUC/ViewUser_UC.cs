@@ -37,7 +37,7 @@ namespace ou_care.AdminUC
             string searchText = txtSearch.Text.Trim();
             if (string.IsNullOrEmpty(searchText))
             {
-                LoadAllUsers(); // Nếu không có từ khóa, load tất cả
+                LoadAllUsers(); // Nếu không có từ khóa, loads tất cả
             }
             else
             {
@@ -59,7 +59,6 @@ namespace ou_care.AdminUC
                                                     "Xác nhận xóa",
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);
-
                 if (result == DialogResult.Yes)
                 {
                     try
