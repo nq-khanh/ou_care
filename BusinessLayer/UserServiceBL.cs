@@ -15,6 +15,7 @@ namespace BusinessLayer
     public class UserServiceBL
     {
         private readonly UserServiceDL userDL = new UserServiceDL();
+        private readonly LogBL logBL = new LogBL();
 
         public bool IsUserLogin(Acccount account)
         {
@@ -51,6 +52,7 @@ namespace BusinessLayer
             return userDL.SearchUsers(username);
         }
 
+        // currentUID là người đang thực hiện xóa, userID là người bị xóa
         public bool DeleteUser(int userID)
         {
             try
@@ -91,7 +93,14 @@ namespace BusinessLayer
         {
             try
             {
-                return userDL.UpdateProfile(username, name, email, newPw, roleID);
+                bool result = userDL.UpdateProfile(username, name, email, newPw, roleID);
+                if (result)
+                {
+                   
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -99,11 +108,17 @@ namespace BusinessLayer
             }
         }
 
-        public bool AddUser(string username, string name, string email, string password, int userRole)
+        public bool AddUser(int currentUserID, string username, string name, string email, string password, int userRole)
         {
             try
             {
-                return userDL.AddUser(username, name, email, password, userRole);
+                int newUserID = userDL.AddUser(username, name, email, password, userRole);
+                if (newUserID > 0)
+                {
+                    logBL.LogAddUser(currentUserID, newUserID);
+                    return true;
+                }
+                return false;
             }
             catch (Exception ex)
             {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BusinessLayer;
 using ou_care.AdminUC; // hoặc namespace chứa Dashboard
 using TransferObject; // Them thu vien chua account
 
@@ -18,6 +18,7 @@ namespace ou_care
     public partial class Admin : Form
     {
         private Acccount currentAccount;
+        LogBL logBL = new LogBL();
 
         public Admin(Acccount account)
         {
@@ -58,12 +59,12 @@ namespace ou_care
             DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
+                logBL.LogLogout(Global.CurrentUser.ID, Global.CurrentUser.ID);
+                Global.Clear(); // Xóa thông tin người dùng
                 Login lg = new Login();
                 this.Hide();
                 lg.Show();
             }
-            else
-                this.DialogResult = DialogResult.No;
         }
 
         private void btnTheoDoiLog_Click(object sender, EventArgs e)

@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "D:\\ou_care\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\adminuc\\dashboard_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\adminuc\\dashboard_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\quenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\quenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\quenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\quenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\adminuc\\activitylog_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\adminuc\\activitylog_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\adminuc\\activitylog_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\adminuc\\activitylog_uc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +47,101 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Dashboard_UC.cs [Design]",
+              "DocumentMoniker": "D:\\ou_care\\ou_care\\AdminUC\\Dashboard_UC.cs",
+              "RelativeDocumentMoniker": "ou_care\\AdminUC\\Dashboard_UC.cs",
+              "ToolTip": "D:\\ou_care\\ou_care\\AdminUC\\Dashboard_UC.cs [Design]*",
+              "RelativeToolTip": "ou_care\\AdminUC\\Dashboard_UC.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T18:14:52.677Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuenMK.cs",
+              "DocumentMoniker": "D:\\ou_care\\ou_care\\QuenMK.cs",
+              "RelativeDocumentMoniker": "ou_care\\QuenMK.cs",
+              "ToolTip": "D:\\ou_care\\ou_care\\QuenMK.cs",
+              "RelativeToolTip": "ou_care\\QuenMK.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T18:00:25.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuenMK.cs [Design]",
+              "DocumentMoniker": "D:\\ou_care\\ou_care\\QuenMK.cs",
+              "RelativeDocumentMoniker": "ou_care\\QuenMK.cs",
+              "ToolTip": "D:\\ou_care\\ou_care\\QuenMK.cs [Design]",
+              "RelativeToolTip": "ou_care\\QuenMK.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T17:53:40.421Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\ou_care\\ou_care\\Login.cs",
+              "RelativeDocumentMoniker": "ou_care\\Login.cs",
+              "ToolTip": "D:\\ou_care\\ou_care\\Login.cs [Design]",
+              "RelativeToolTip": "ou_care\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T17:48:21.179Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\ou_care\\ou_care\\Login.cs",
               "RelativeDocumentMoniker": "ou_care\\Login.cs",
               "ToolTip": "D:\\ou_care\\ou_care\\Login.cs",
               "RelativeToolTip": "ou_care\\Login.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAApwG4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T13:35:58.15Z",
+              "WhenOpened": "2025-05-11T17:50:29.53Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Admin.cs [Design]",
+              "DocumentMoniker": "D:\\ou_care\\ou_care\\Admin.cs",
+              "RelativeDocumentMoniker": "ou_care\\Admin.cs",
+              "ToolTip": "D:\\ou_care\\ou_care\\Admin.cs [Design]",
+              "RelativeToolTip": "ou_care\\Admin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T17:47:57.978Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ActivityLog_UC.cs",
+              "DocumentMoniker": "D:\\ou_care\\ou_care\\AdminUC\\ActivityLog_UC.cs",
+              "RelativeDocumentMoniker": "ou_care\\AdminUC\\ActivityLog_UC.cs",
+              "ToolTip": "D:\\ou_care\\ou_care\\AdminUC\\ActivityLog_UC.cs",
+              "RelativeToolTip": "ou_care\\AdminUC\\ActivityLog_UC.cs",
+              "ViewState": "AgIAAG4BAAAAAAAAAAAAwAsBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T16:53:32.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ActivityLog_UC.cs [Design]",
+              "DocumentMoniker": "D:\\ou_care\\ou_care\\AdminUC\\ActivityLog_UC.cs",
+              "RelativeDocumentMoniker": "ou_care\\AdminUC\\ActivityLog_UC.cs",
+              "ToolTip": "D:\\ou_care\\ou_care\\AdminUC\\ActivityLog_UC.cs [Design]",
+              "RelativeToolTip": "ou_care\\AdminUC\\ActivityLog_UC.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T16:53:30.227Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

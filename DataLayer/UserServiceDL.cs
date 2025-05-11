@@ -157,12 +157,12 @@ namespace DataLayer
             }
         }
 
-        public bool AddUser(string username, string name, string email, string password, int userRole)
+        public int AddUser(string username, string name, string email, string password, int userRole)
         {
             using (var context = new OUCareDBContext())
             {
                 if (context.Users.Any(u => u.userName == username))
-                    return false;
+                    return -1; // Username đã tồn tại
 
                 var newUser = new User
                 {
@@ -177,7 +177,7 @@ namespace DataLayer
 
                 context.Users.Add(newUser);
                 context.SaveChanges();
-                return true;
+                return newUser.ID; // Trả về ID của người dùng mới
             }
         }
     }

@@ -24,6 +24,7 @@ namespace BusinessLayer
             return logDL.GetAllUsers();
         }
 
+        // Người thêm - hành động gì - ID Đối tượng bị tác động - Tên đối tượng bị tác động
         public void AddLog(int userID, string action, int? entityID, string entityType)
         {
             LogDTO log = new LogDTO
@@ -65,6 +66,28 @@ namespace BusinessLayer
         public void LogAddUser(int userID, int newUserID)
         {
             AddLog(userID, "Thêm người dùng", newUserID, "User");
+        }
+
+        // Ghi log update người dùng
+        public void LogUpdateUser(int userID, int updatedUserID)
+        {
+            AddLog(userID, "Sửa người dùng", updatedUserID, "User");
+        }
+
+        // Ghi log Xóa người dùng
+        public void LogDeleteUser(int userID, int deletedUserID)
+        {
+            AddLog(userID, "Xóa người dùng", deletedUserID, "User");
+        }
+        // Ghi log đăng nhập
+        public void LogLogin(int userID, int loginUserID)
+        {
+            AddLog(userID, "Đăng nhập", loginUserID, "User");
+        }
+        // Ghi log đăng xuất
+        public void LogLogout(int userID, int logoutUserID)
+        {
+            AddLog(userID, "Đăng xuất", logoutUserID, "User");
         }
     }
 }

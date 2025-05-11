@@ -80,5 +80,10 @@ namespace ou_care.AdminUC
         {
             this.Close();
         }
+
+        private void LogDetailForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

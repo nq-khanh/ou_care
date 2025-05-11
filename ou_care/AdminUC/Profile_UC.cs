@@ -19,6 +19,7 @@ namespace ou_care.AdminUC
     {
         private UserServiceBL userService;    
         private Acccount currentAccount;
+        UsersDTO currentUser = Global.CurrentUser;
 
         public Profile_UC(Acccount account)
         {

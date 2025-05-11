@@ -14,11 +14,23 @@ namespace ou_care.AdminUC
 {
     public partial class AddUser_UC : UserControl
     {
-        UserServiceBL userService;
+        UserServiceBL userServiceBL;
         public AddUser_UC()
         {
             InitializeComponent();
-            userService = new UserServiceBL();
+            userServiceBL = new UserServiceBL();
+            SetupUI();
+        }
+
+        private void SetupUI()
+        {
+            // Giả sử bạn có các TextBox và ComboBox
+            cboRole.Items.Clear();
+            cboRole.Items.Add(new { Text = "Admin", Value = 1 });
+            cboRole.Items.Add(new { Text = "Staff", Value = 2 });
+            cboRole.DisplayMember = "Text";
+            cboRole.ValueMember = "Value";
+            cboRole.SelectedIndex = 0;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -37,6 +49,12 @@ namespace ou_care.AdminUC
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            if (Global.CurrentUser == null)
+            {
+                MessageBox.Show("Vui lòng đăng nhập lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int currentUserID = Global.CurrentUser.ID;
             // Chuẩn hóa dữ liệu lấy trên giao diện
             string username = txtUsername.Text.Trim();
             string name = txtName.Text.Trim();
@@ -54,7 +72,7 @@ namespace ou_care.AdminUC
 
             try
             {
-                bool success = userService.AddUser(username, name, email, password, userRole);
+                bool success = userServiceBL.AddUser(currentUserID, username, name, email, password, userRole);
 
                 if (success)
                 {
@@ -70,6 +88,11 @@ namespace ou_care.AdminUC
             {
                 MessageBox.Show("Lỗi khi thêm người dùng: " + ex.Message);
             }
+        }
+
+        private void cboRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

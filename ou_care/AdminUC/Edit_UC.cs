@@ -17,12 +17,16 @@ namespace ou_care.AdminUC
     {
         private UserServiceBL userService;
         private string username; // Lưu username của người dùng được chọn
+        private int ID; // Lưu id của người dùng được chọn
+        UsersDTO currentUser = Global.CurrentUser;
+        LogBL logBL = new LogBL();
 
-        public Edit_UC(string username)
+        public Edit_UC(string username, int ID)
         {
             InitializeComponent();
             userService = new UserServiceBL();
             this.username = username;
+            this.ID = ID;
         }
 
         private void Edit_UC_Load(object sender, EventArgs e)
@@ -74,6 +78,9 @@ namespace ou_care.AdminUC
 
                 // Gọi phương thức UpdateProfile
                 bool success = userService.UpdateProfile(username, name, email, oldPassword, newPassword, newRole);
+                if(success)
+                    // Nếu thành công thì ghi log currentUser.ID -> update 
+                    logBL.LogUpdateUser(currentUser.ID, this.ID);
 
                 if (success)
                 {

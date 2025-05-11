@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.lbTongThuoc = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.chartBestSeller = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -80,33 +80,33 @@
             // 
             // chartBestSeller
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartBestSeller.ChartAreas.Add(chartArea2);
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.chartBestSeller.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartBestSeller.ChartAreas.Add(chartArea1);
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            legend1.IsTextAutoFit = false;
+            legend1.Name = "Legend1";
+            this.chartBestSeller.Legends.Add(legend1);
             this.chartBestSeller.Location = new System.Drawing.Point(364, 195);
             this.chartBestSeller.Margin = new System.Windows.Forms.Padding(5);
             this.chartBestSeller.Name = "chartBestSeller";
-            this.chartBestSeller.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            series2.IsValueShownAsLabel = true;
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartBestSeller.Series.Add(series2);
+            this.chartBestSeller.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartBestSeller.Series.Add(series1);
             this.chartBestSeller.Size = new System.Drawing.Size(341, 398);
             this.chartBestSeller.TabIndex = 27;
             this.chartBestSeller.Text = "chartTopProducts";
-            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            title2.Name = "Title1";
-            title2.Text = "5 Thuốc bán chạy";
-            this.chartBestSeller.Titles.Add(title2);
+            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title1.Name = "Title1";
+            title1.Text = "5 Thuốc bán chạy";
+            this.chartBestSeller.Titles.Add(title1);
             // 
             // panel5
             // 

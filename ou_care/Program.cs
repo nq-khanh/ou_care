@@ -20,7 +20,7 @@ namespace ou_care
         {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Admin(acc));
+            Application.Run(new Login());
         }
     }
 }

@@ -16,6 +16,7 @@ namespace ou_care
     public partial class Login : Form
     {
         private UserServiceBL userService; // Khai báo UserService
+        LogBL logBL = new LogBL();
 
         public Login()
         {
@@ -51,18 +52,27 @@ namespace ou_care
             pass = txtPw.Text;
 
             Acccount account = new Acccount(user, pass);
-
-            bool result = userService.IsUserLogin_ORM(account);
-
-            if (result)
+         
+            if (isUserLogin(account))
             {
-                Admin adminForm = new Admin(account); // Truyền account vào
-                this.Hide();
-                adminForm.Show();
+                // Lấy thông tin người dùng và lưu vào Global
+                UsersDTO userProfile = userService.GetUserProfile(user);
+                if (userProfile != null)
+                {
+                    Global.CurrentUser = userProfile;
+                    logBL.LogLogin(Global.CurrentUser.ID, Global.CurrentUser.ID);
+                    Admin adminForm = new Admin(account); // Không cần truyền Acccount nữa
+                    this.Hide();
+                    adminForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể tải thông tin người dùng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,6 +103,12 @@ namespace ou_care
         private void panel2_39_Khanh_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void lbQuenMK_Click(object sender, EventArgs e)
+        {
+            QuenMK qmk = new QuenMK();
+            qmk.Show();
         }
     }
 }

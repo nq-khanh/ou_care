@@ -92,6 +92,7 @@
             this.Controls.Add(this.lblTime);
             this.Name = "LogDetailForm";
             this.Text = "LogDetailForm";
+            this.Load += new System.EventHandler(this.LogDetailForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

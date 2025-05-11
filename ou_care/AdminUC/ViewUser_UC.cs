@@ -15,6 +15,7 @@ namespace ou_care.AdminUC
     public partial class ViewUser_UC : UserControl
     {
         private UserServiceBL userService; // Khai báo thuộc tính
+        LogBL logBL = new LogBL();
         public ViewUser_UC()
         {
             InitializeComponent();
@@ -64,8 +65,11 @@ namespace ou_care.AdminUC
                     try
                     {
                         bool success = userService.DeleteUser(userID);
+                        // Ghi log xóa thành công
+                        logBL.LogDeleteUser(Global.CurrentUser.ID, userID);
                         if (success)
                         {
+                            
                             MessageBox.Show("Xóa người dùng thành công!", "Thông báo",
                                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                             // Tải lại danh sách sau khi xóa
@@ -96,9 +100,11 @@ namespace ou_care.AdminUC
             if (dgvViewUser.SelectedRows.Count > 0)
             {
                 string username = dgvViewUser.SelectedRows[0].Cells["userName"].Value.ToString();
+                // lấy giá trị id của người dùng đang chuẩn bị chỉnh sửa truyền sang cho edit_uc
+                int id = Convert.ToInt32(dgvViewUser.SelectedRows[0].Cells["ID"].Value);
 
                 // Tạo một instance của Edit_UC và truyền username
-                Edit_UC editUC = new Edit_UC(username);
+                Edit_UC editUC = new Edit_UC(username, id);
 
                 // Hiển thị Edit_UC trong mainPanel
                 this.Controls.Clear(); // Xóa UserControl hiện tại
