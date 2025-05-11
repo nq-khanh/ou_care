@@ -11,7 +11,9 @@ namespace DataLayer
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    [Table("Log")]
     public partial class Log
     {
         public int ID { get; set; }

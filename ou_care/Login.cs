@@ -15,12 +15,12 @@ namespace ou_care
 {
     public partial class Login : Form
     {
-        private UserService userService; // Khai báo UserService
+        private UserServiceBL userService; // Khai báo UserService
 
         public Login()
         {
             InitializeComponent();
-            userService = new UserService(); // Khởi tạo UserService
+            userService = new UserServiceBL(); // Khởi tạo UserService
         }
 
         private bool isUserLogin(Acccount account)
@@ -45,33 +45,6 @@ namespace ou_care
         // Khi nút đăng nhập được nhấn
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string user, pass;
-            //// Lấy dữ liệu từ người dùng
-            //user = txtUsername.Text;
-            //pass = txtPw.Text;
-
-            //Acccount account = new Acccount(user, pass);
-
-            //if(isUserLogin(account))
-            //{
-            //    // Hiện form admin (chưa kiểm tra xem là role nào)
-            //    Admin ad = new Admin();
-            //    ad.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    string msg = "Tài khoản hoặc mật khẩu sai";
-            //    DialogResult result = MessageBox.Show(msg, "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-
-            //    if (result == DialogResult.Retry)
-            //    {
-            //        txtPw.Clear();
-            //        txtPw.Focus();
-            //    }
-            //    else
-            //        this.DialogResult = DialogResult.OK;
-            //}
             string user, pass;
             // Lấy dữ liệu từ người dùng
             user = txtUsername.Text;
@@ -115,6 +88,11 @@ namespace ou_care
         {
             txtUsername.Text = "Admin01";
             txtPw.Text = "Admin123";
+        }
+
+        private void panel2_39_Khanh_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

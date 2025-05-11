@@ -17,13 +17,13 @@ namespace ou_care.AdminUC
 {
     public partial class Profile_UC : UserControl
     {
-        private UserService userService;    
+        private UserServiceBL userService;    
         private Acccount currentAccount;
 
         public Profile_UC(Acccount account)
         {
             InitializeComponent();
-            userService = new UserService();
+            userService = new UserServiceBL();
             currentAccount = account;
         }
 
@@ -55,6 +55,7 @@ namespace ou_care.AdminUC
                     lbUsername.Text = userProfile.userName;
                     txtName.Text = userProfile.name;
                     txtEmail.Text = userProfile.email;
+                    txtUserRole.Text = userProfile.roleID.ToString();
                 }
                 else
                 {
@@ -95,7 +96,8 @@ namespace ou_care.AdminUC
                     txtName.Text,
                     txtEmail.Text,
                     txtOldPass.Text,
-                    txtNewPass.Text
+                    txtNewPass.Text,
+                    Convert.ToInt32(txtUserRole.Text)
                 );
 
                 if (updated)
@@ -112,6 +114,11 @@ namespace ou_care.AdminUC
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
+        }
+
+        private void txtUserRole_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

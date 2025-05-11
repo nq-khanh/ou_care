@@ -42,8 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acccount.cs" />
+    <Compile Include="LogDTO.cs" />
+    <Compile Include="MedicineDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoleDTO.cs" />
     <Compile Include="UsersDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,11 +14,11 @@ namespace ou_care.AdminUC
 {
     public partial class AddUser_UC : UserControl
     {
-        UserService userService;
+        UserServiceBL userService;
         public AddUser_UC()
         {
             InitializeComponent();
-            userService = new UserService();
+            userService = new UserServiceBL();
         }
 
         private void btnReset_Click(object sender, EventArgs e)

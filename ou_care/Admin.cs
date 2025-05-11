@@ -26,7 +26,7 @@ namespace ou_care
         }
 
         // Hàm load Control
-        private void LoadUserControl(UserControl uc)
+        public void LoadUserControl(UserControl uc)
         {
             panelMain.Controls.Clear();       // Xóa control cũ
             uc.Dock = DockStyle.Fill;         // Dock full panel
@@ -64,6 +64,11 @@ namespace ou_care
             }
             else
                 this.DialogResult = DialogResult.No;
+        }
+
+        private void btnTheoDoiLog_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new ActivityLog_UC());
         }
     }
 }

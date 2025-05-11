@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OUCareModelStoreContainer" CdmEntityContainer="OUCareDBContext">
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="OUCareModel.Bill">
+        <MappingFragment StoreEntitySet="Bill">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cusID" ColumnName="cusID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="billDate" ColumnName="billDate" />
+          <ScalarProperty Name="qrLink" ColumnName="qrLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillDetails">
+      <EntityTypeMapping TypeName="OUCareModel.BillDetail">
+        <MappingFragment StoreEntitySet="BillDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="billID" ColumnName="billID" />
+          <ScalarProperty Name="medID" ColumnName="medID" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="unitPrice" ColumnName="unitPrice" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="OUCareModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="OUCareModel.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="entityID" ColumnName="entityID" />
+          <ScalarProperty Name="entityType" ColumnName="entityType" />
+          <ScalarProperty Name="logDate" ColumnName="logDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medicines">
+      <EntityTypeMapping TypeName="OUCareModel.Medicine">
+        <MappingFragment StoreEntitySet="Medicine">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="medCode" ColumnName="medCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="expiryDate" ColumnName="expiryDate" />
+          <ScalarProperty Name="instruction" ColumnName="instruction" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="lastUpdated" ColumnName="lastUpdated" />
+          <ScalarProperty Name="groupID" ColumnName="groupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicineBatches">
+      <EntityTypeMapping TypeName="OUCareModel.MedicineBatch">
+        <MappingFragment StoreEntitySet="MedicineBatch">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="supplierName" ColumnName="supplierName" />
+          <ScalarProperty Name="importDate" ColumnName="importDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicineBatchDetails">
+      <EntityTypeMapping TypeName="OUCareModel.MedicineBatchDetail">
+        <MappingFragment StoreEntitySet="MedicineBatchDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="medID" ColumnName="medID" />
+          <ScalarProperty Name="batchID" ColumnName="batchID" />
+          <ScalarProperty Name="quantityImported" ColumnName="quantityImported" />
+          <ScalarProperty Name="importPrice" ColumnName="importPrice" />
+          <ScalarProperty Name="importDate" ColumnName="importDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicineGroups">
+      <EntityTypeMapping TypeName="OUCareModel.MedicineGroup">
+        <MappingFragment StoreEntitySet="MedicineGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="groupName" ColumnName="groupName" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="OUCareModel.Notification">
+        <MappingFragment StoreEntitySet="Notification">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cusID" ColumnName="cusID" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="sendDate" ColumnName="sendDate" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="OUCareModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="OUCareModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="passWord" ColumnName="passWord" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ou_care\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|d:\\ou_care\\ou_care\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36628A62-4B9D-4A7D-97D6-F0F3DB3D424B}|ou_care\\PresentationLayer.csproj|solutionrelative:ou_care\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 229,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\ou_care\\ou_care\\Login.cs",
+              "RelativeDocumentMoniker": "ou_care\\Login.cs",
+              "ToolTip": "D:\\ou_care\\ou_care\\Login.cs",
+              "RelativeToolTip": "ou_care\\Login.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T13:35:58.15Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

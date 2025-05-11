@@ -14,11 +14,11 @@ namespace ou_care.AdminUC
 {
     public partial class ViewUser_UC : UserControl
     {
-        private UserService userService; // Khai báo thuộc tính
+        private UserServiceBL userService; // Khai báo thuộc tính
         public ViewUser_UC()
         {
             InitializeComponent();
-            userService = new UserService(); // Gọi cons
+            userService = new UserServiceBL(); // Gọi cons
         }
 
         private void LoadAllUsers()
@@ -89,6 +89,32 @@ namespace ou_care.AdminUC
                 MessageBox.Show("Vui lòng chọn người dùng cần xóa!", "Thông báo",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dgvViewUser.SelectedRows.Count > 0)
+            {
+                string username = dgvViewUser.SelectedRows[0].Cells["userName"].Value.ToString();
+
+                // Tạo một instance của Edit_UC và truyền username
+                Edit_UC editUC = new Edit_UC(username);
+
+                // Hiển thị Edit_UC trong mainPanel
+                this.Controls.Clear(); // Xóa UserControl hiện tại
+                this.Controls.Add(editUC); // Thêm Edit_UC vào Panel
+                editUC.Dock = DockStyle.Fill; // Đặt Dock để Edit_UC chiếm toàn bộ Panel
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn người dùng cần chỉnh sửa!", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dgvViewUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

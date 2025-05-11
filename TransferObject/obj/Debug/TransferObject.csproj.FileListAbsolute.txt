@@ -1,0 +1,8 @@
+D:\ou_care\TransferObject\..bin\Debug\TransferObject.dll
+D:\ou_care\TransferObject\..bin\Debug\TransferObject.pdb
+D:\ou_care\TransferObject\obj\Debug\TransferObject.csproj.AssemblyReference.cache
+D:\ou_care\TransferObject\obj\Debug\TransferObject.csproj.CoreCompileInputs.cache
+D:\ou_care\TransferObject\obj\Debug\TransferObject.dll
+D:\ou_care\TransferObject\obj\Debug\TransferObject.pdb
+D:\ou_care\bin\Debug\TransferObject.dll
+D:\ou_care\bin\Debug\TransferObject.pdb

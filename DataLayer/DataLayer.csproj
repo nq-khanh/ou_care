@@ -59,10 +59,12 @@
     <Compile Include="Customer.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DashboardDL.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Log.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="LogDL.cs" />
     <Compile Include="Medicine.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
@@ -100,6 +102,7 @@
     <Compile Include="User.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserServiceDL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransferObject\TransferObject.csproj">

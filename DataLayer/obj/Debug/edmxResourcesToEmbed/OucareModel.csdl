@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OUCareModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cusID" Type="Int32" />
+    <Property Name="userID" Type="Int32" />
+    <Property Name="total" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="billDate" Type="DateTime" Precision="3" />
+    <Property Name="qrLink" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__Bill__cusID__534D60F1" FromRole="Bill" ToRole="Customer" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Bill__userID__5441852A" FromRole="Bill" ToRole="Users" />
+    <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__billI__571DF1D5" FromRole="Bill" ToRole="BillDetails" />
+  </EntityType>
+  <EntityType Name="BillDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="billID" Type="Int32" />
+    <Property Name="medID" Type="Int32" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="unitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK__BillDetai__billI__571DF1D5" FromRole="BillDetails" ToRole="Bill" />
+    <NavigationProperty Name="Medicine" Relationship="Self.FK__BillDetai__medID__5812160E" FromRole="BillDetails" ToRole="Medicine" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__cusID__534D60F1" FromRole="Customer" ToRole="Bill" />
+    <NavigationProperty Name="Notifications" Relationship="Self.FK__Notificat__cusID__440B1D61" FromRole="Customer" ToRole="Notification" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" />
+    <Property Name="action" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="entityID" Type="Int32" />
+    <Property Name="entityType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="logDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Log__userID__3E52440B" FromRole="Log" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Medicine">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="medCode" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Double" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="expiryDate" Type="DateTime" Precision="3" />
+    <Property Name="instruction" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="createdDate" Type="DateTime" Precision="3" />
+    <Property Name="lastUpdated" Type="DateTime" Precision="3" />
+    <Property Name="groupID" Type="Int32" />
+    <NavigationProperty Name="BillDetails" Relationship="Self.FK__BillDetai__medID__5812160E" FromRole="Medicine" ToRole="BillDetails" />
+    <NavigationProperty Name="MedicineGroup" Relationship="Self.FK__Medicine__groupI__4AB81AF0" FromRole="Medicine" ToRole="MedicineGroup" />
+    <NavigationProperty Name="MedicineBatchDetails" Relationship="Self.FK__MedicineB__medID__4F7CD00D" FromRole="Medicine" ToRole="MedicineBatchDetails" />
+  </EntityType>
+  <EntityType Name="MedicineBatch">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="supplierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="importDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="MedicineBatchDetails" Relationship="Self.FK__MedicineB__batch__5070F446" FromRole="MedicineBatch" ToRole="MedicineBatchDetails" />
+  </EntityType>
+  <EntityType Name="MedicineBatchDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="medID" Type="Int32" />
+    <Property Name="batchID" Type="Int32" />
+    <Property Name="quantityImported" Type="Int32" Nullable="false" />
+    <Property Name="importPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="importDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Medicine" Relationship="Self.FK__MedicineB__medID__4F7CD00D" FromRole="MedicineBatchDetails" ToRole="Medicine" />
+    <NavigationProperty Name="MedicineBatch" Relationship="Self.FK__MedicineB__batch__5070F446" FromRole="MedicineBatchDetails" ToRole="MedicineBatch" />
+  </EntityType>
+  <EntityType Name="MedicineGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="groupName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Medicines" Relationship="Self.FK__Medicine__groupI__4AB81AF0" FromRole="MedicineGroup" ToRole="Medicine" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cusID" Type="Int32" />
+    <Property Name="message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sendDate" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Boolean" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK__Notificat__cusID__440B1D61" FromRole="Notification" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__roleID__3B75D760" FromRole="Role" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="passWord" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="roleID" Type="Int32" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Int32" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK__Bill__userID__5441852A" FromRole="Users" ToRole="Bill" />
+    <NavigationProperty Name="Logs" Relationship="Self.FK__Log__userID__3E52440B" FromRole="Users" ToRole="Log" />
+    <NavigationProperty Name="Role" Relationship="Self.FK__Users__roleID__3B75D760" FromRole="Users" ToRole="Role" />
+  </EntityType>
+  <Association Name="FK__Bill__cusID__534D60F1">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="cusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bill__userID__5441852A">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BillDetai__billI__571DF1D5">
+    <End Role="Bill" Type="Self.Bill" Multiplicity="0..1" />
+    <End Role="BillDetails" Type="Self.BillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bill">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BillDetails">
+        <PropertyRef Name="billID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BillDetai__medID__5812160E">
+    <End Role="Medicine" Type="Self.Medicine" Multiplicity="0..1" />
+    <End Role="BillDetails" Type="Self.BillDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicine">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BillDetails">
+        <PropertyRef Name="medID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificat__cusID__440B1D61">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="cusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Log__userID__3E52440B">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Log" Type="Self.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Medicine__groupI__4AB81AF0">
+    <End Role="MedicineGroup" Type="Self.MedicineGroup" Multiplicity="0..1" />
+    <End Role="Medicine" Type="Self.Medicine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedicineGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Medicine">
+        <PropertyRef Name="groupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedicineB__medID__4F7CD00D">
+    <End Role="Medicine" Type="Self.Medicine" Multiplicity="0..1" />
+    <End Role="MedicineBatchDetails" Type="Self.MedicineBatchDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicine">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MedicineBatchDetails">
+        <PropertyRef Name="medID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedicineB__batch__5070F446">
+    <End Role="MedicineBatch" Type="Self.MedicineBatch" Multiplicity="0..1" />
+    <End Role="MedicineBatchDetails" Type="Self.MedicineBatchDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedicineBatch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MedicineBatchDetails">
+        <PropertyRef Name="batchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__roleID__3B75D760">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OUCareDBContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bills" EntityType="Self.Bill" />
+    <EntitySet Name="BillDetails" EntityType="Self.BillDetail" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Logs" EntityType="Self.Log" />
+    <EntitySet Name="Medicines" EntityType="Self.Medicine" />
+    <EntitySet Name="MedicineBatches" EntityType="Self.MedicineBatch" />
+    <EntitySet Name="MedicineBatchDetails" EntityType="Self.MedicineBatchDetail" />
+    <EntitySet Name="MedicineGroups" EntityType="Self.MedicineGroup" />
+    <EntitySet Name="Notifications" EntityType="Self.Notification" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Bill__cusID__534D60F1" Association="Self.FK__Bill__cusID__534D60F1">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bill__userID__5441852A" Association="Self.FK__Bill__userID__5441852A">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BillDetai__billI__571DF1D5" Association="Self.FK__BillDetai__billI__571DF1D5">
+      <End Role="Bill" EntitySet="Bills" />
+      <End Role="BillDetails" EntitySet="BillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BillDetai__medID__5812160E" Association="Self.FK__BillDetai__medID__5812160E">
+      <End Role="Medicine" EntitySet="Medicines" />
+      <End Role="BillDetails" EntitySet="BillDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificat__cusID__440B1D61" Association="Self.FK__Notificat__cusID__440B1D61">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Notification" EntitySet="Notifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Log__userID__3E52440B" Association="Self.FK__Log__userID__3E52440B">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Log" EntitySet="Logs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Medicine__groupI__4AB81AF0" Association="Self.FK__Medicine__groupI__4AB81AF0">
+      <End Role="MedicineGroup" EntitySet="MedicineGroups" />
+      <End Role="Medicine" EntitySet="Medicines" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedicineB__medID__4F7CD00D" Association="Self.FK__MedicineB__medID__4F7CD00D">
+      <End Role="Medicine" EntitySet="Medicines" />
+      <End Role="MedicineBatchDetails" EntitySet="MedicineBatchDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedicineB__batch__5070F446" Association="Self.FK__MedicineB__batch__5070F446">
+      <End Role="MedicineBatch" EntitySet="MedicineBatches" />
+      <End Role="MedicineBatchDetails" EntitySet="MedicineBatchDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__roleID__3B75D760" Association="Self.FK__Users__roleID__3B75D760">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
