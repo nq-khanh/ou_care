@@ -40,16 +40,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(23, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 29);
+            this.label1.Size = new System.Drawing.Size(148, 28);
             this.label1.TabIndex = 1;
-            this.label1.Text = "View User";
+            this.label1.Text = "XEM THÔNG TIN";
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(340, 99);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -61,6 +62,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Navy;
             this.label6.Location = new System.Drawing.Point(335, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 25);
@@ -80,10 +82,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Navy;
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(273, 622);
+            this.btnDelete.Location = new System.Drawing.Point(585, 622);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(164, 44);
             this.btnDelete.TabIndex = 24;
@@ -93,10 +95,10 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.Crimson;
+            this.btnEdit.BackColor = System.Drawing.Color.Navy;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(459, 622);
+            this.btnEdit.Location = new System.Drawing.Point(755, 622);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(164, 44);
             this.btnEdit.TabIndex = 25;

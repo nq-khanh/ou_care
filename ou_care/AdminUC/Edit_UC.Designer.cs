@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtUserRole = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNewPass = new System.Windows.Forms.TextBox();
@@ -43,24 +41,15 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbUserRole = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(236, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(454, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "THAY ĐỔI THÔNG TIN NGƯỜI DÙNG";
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Navy;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(375, 608);
+            this.btnSave.Location = new System.Drawing.Point(375, 591);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(164, 44);
             this.btnSave.TabIndex = 25;
@@ -68,40 +57,30 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtUserRole
-            // 
-            this.txtUserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserRole.Location = new System.Drawing.Point(149, 269);
-            this.txtUserRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUserRole.Multiline = true;
-            this.txtUserRole.Name = "txtUserRole";
-            this.txtUserRole.Size = new System.Drawing.Size(257, 30);
-            this.txtUserRole.TabIndex = 55;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(508, 411);
+            this.label6.Location = new System.Drawing.Point(508, 445);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 25);
+            this.label6.Size = new System.Drawing.Size(129, 25);
             this.label6.TabIndex = 54;
-            this.label6.Text = "New password";
+            this.label6.Text = "Mật khẩu mới";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(508, 295);
+            this.label2.Location = new System.Drawing.Point(508, 338);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 25);
+            this.label2.Size = new System.Drawing.Size(119, 25);
             this.label2.TabIndex = 53;
-            this.label2.Text = "Old password";
+            this.label2.Text = "Mật khẩu cũ";
             // 
             // txtNewPass
             // 
             this.txtNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPass.Location = new System.Drawing.Point(513, 450);
+            this.txtNewPass.Location = new System.Drawing.Point(513, 485);
             this.txtNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNewPass.Multiline = true;
             this.txtNewPass.Name = "txtNewPass";
@@ -112,7 +91,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(147, 223);
+            this.label5.Location = new System.Drawing.Point(508, 241);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 51;
@@ -154,14 +133,14 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(147, 338);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.Size = new System.Drawing.Size(47, 25);
             this.label3.TabIndex = 47;
-            this.label3.Text = "Name";
+            this.label3.Text = "Tên";
             // 
             // txtOldPass
             // 
             this.txtOldPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldPass.Location = new System.Drawing.Point(513, 347);
+            this.txtOldPass.Location = new System.Drawing.Point(513, 378);
             this.txtOldPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOldPass.Multiline = true;
             this.txtOldPass.Name = "txtOldPass";
@@ -171,7 +150,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(87, 137);
+            this.txtUsername.Location = new System.Drawing.Point(152, 280);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
@@ -183,7 +162,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(85, 91);
+            this.label7.Location = new System.Drawing.Point(150, 234);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 25);
             this.label7.TabIndex = 56;
@@ -191,24 +170,36 @@
             // 
             // cmbUserRole
             // 
+            this.cmbUserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUserRole.FormattingEnabled = true;
             this.cmbUserRole.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.cmbUserRole.Location = new System.Drawing.Point(574, 174);
+            this.cmbUserRole.Location = new System.Drawing.Point(513, 284);
             this.cmbUserRole.Name = "cmbUserRole";
-            this.cmbUserRole.Size = new System.Drawing.Size(121, 24);
+            this.cmbUserRole.Size = new System.Drawing.Size(118, 28);
             this.cmbUserRole.TabIndex = 58;
             this.cmbUserRole.SelectedIndexChanged += new System.EventHandler(this.cmbUserRole_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(245, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(432, 31);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "THAY ĐỔI THÔNG TIN NGƯỜI DÙNG";
             // 
             // Edit_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbUserRole);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtUserRole);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNewPass);
@@ -219,7 +210,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtOldPass);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label1);
             this.Name = "Edit_UC";
             this.Size = new System.Drawing.Size(946, 736);
             this.Load += new System.EventHandler(this.Edit_UC_Load);
@@ -229,10 +219,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtUserRole;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNewPass;
@@ -245,5 +232,6 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbUserRole;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -49,8 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DashboardBL.cs" />
+    <Compile Include="ForgotPassBL.cs" />
     <Compile Include="LogBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevenueBL.cs" />
     <Compile Include="UserServiceBL.cs" />
   </ItemGroup>
   <ItemGroup>

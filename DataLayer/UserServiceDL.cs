@@ -11,18 +11,18 @@ namespace DataLayer
 {
     public class UserServiceDL
     {
-        private readonly DataProvider dataProvider = new DataProvider();
+        //private readonly DataProvider dataProvider = new DataProvider();
 
-        public object IsUserLogin(string username, string password)
-        {
-            string sql = "SELECT COUNT(*) FROM [User] WHERE Username = @Username AND Password = @Password";
-            var parameters = new[]
-            {
-                new SqlParameter("@Username", username),
-                new SqlParameter("@Password", password)
-            };
-            return dataProvider.MyExcuteScalar(sql, CommandType.Text, parameters);
-        }
+        //public object IsUserLogin(string username, string password)
+        //{
+        //    string sql = "SELECT COUNT(*) FROM [User] WHERE Username = @Username AND Password = @Password";
+        //    var parameters = new[]
+        //    {
+        //        new SqlParameter("@Username", username),
+        //        new SqlParameter("@Password", password)
+        //    };
+        //    return dataProvider.MyExcuteScalar(sql, CommandType.Text, parameters);
+        //}
 
         public bool IsUserLogin_ORM(string username, string password)
         {

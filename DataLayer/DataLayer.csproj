@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="DashboardDL.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="ForgotPassDL.cs" />
     <Compile Include="Log.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>
@@ -96,6 +97,7 @@
       <DependentUpon>OucareModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenenueDL.cs" />
     <Compile Include="Role.cs">
       <DependentUpon>OucareModel.tt</DependentUpon>
     </Compile>

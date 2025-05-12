@@ -17,18 +17,18 @@ namespace BusinessLayer
         private readonly UserServiceDL userDL = new UserServiceDL();
         private readonly LogBL logBL = new LogBL();
 
-        public bool IsUserLogin(Acccount account)
-        {
-            try
-            {
-                object result = userDL.IsUserLogin(account.Username, account.Password);
-                return Convert.ToInt32(result) > 0;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi kiểm tra đăng nhập: " + ex.Message);
-            }
-        }
+        //public bool IsUserLogin(Acccount account)
+        //{
+        //    try
+        //    {
+        //        object result = userDL.IsUserLogin(account.Username, account.Password);
+        //        return Convert.ToInt32(result) > 0;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception("Lỗi khi kiểm tra đăng nhập: " + ex.Message);
+        //    }
+        //}
 
         public bool IsUserLogin_ORM(Acccount account)
         {

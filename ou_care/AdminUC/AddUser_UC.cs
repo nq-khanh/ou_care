@@ -19,19 +19,19 @@ namespace ou_care.AdminUC
         {
             InitializeComponent();
             userServiceBL = new UserServiceBL();
-            SetupUI();
+            //SetupUI();
         }
 
-        private void SetupUI()
-        {
-            // Giả sử bạn có các TextBox và ComboBox
-            cboRole.Items.Clear();
-            cboRole.Items.Add(new { Text = "Admin", Value = 1 });
-            cboRole.Items.Add(new { Text = "Staff", Value = 2 });
-            cboRole.DisplayMember = "Text";
-            cboRole.ValueMember = "Value";
-            cboRole.SelectedIndex = 0;
-        }
+        //private void SetupUI()
+        //{
+        //    // Giả sử bạn có các TextBox và ComboBox
+        //    cboRole.Items.Clear();
+        //    cboRole.Items.Add(new { Text = "Admin", Value = 1 });
+        //    cboRole.Items.Add(new { Text = "Staff", Value = 2 });
+        //    cboRole.DisplayMember = "Text";
+        //    cboRole.ValueMember = "Value";
+        //    cboRole.SelectedIndex = 0;
+        //}
 
         private void btnReset_Click(object sender, EventArgs e)
         {

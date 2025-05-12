@@ -26,3 +26,4 @@ D:\ou_care\ou_care\obj\Debug\ou_care.AdminUC.Edit_UC.resources
 D:\ou_care\ou_care\obj\Debug\ou_care.AdminUC.ActivityLog_UC.resources
 D:\ou_care\ou_care\obj\Debug\ou_care.AdminUC.LogDetailForm.resources
 D:\ou_care\ou_care\obj\Debug\ou_care.QuenMK.resources
+D:\ou_care\ou_care\obj\Debug\ou_care.AdminUC.Revenue.resources

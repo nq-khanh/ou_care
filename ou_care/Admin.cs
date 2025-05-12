@@ -71,5 +71,10 @@ namespace ou_care
         {
             LoadUserControl(new ActivityLog_UC());
         }
+
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new Revenue());
+        }
     }
 }

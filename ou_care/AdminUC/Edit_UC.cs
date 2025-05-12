@@ -47,7 +47,7 @@ namespace ou_care.AdminUC
                     txtUsername.Text = userProfile.userName;
                     txtName.Text = userProfile.name;
                     txtEmail.Text = userProfile.email;
-                    txtUserRole.Text = userProfile.roleID.HasValue ? userProfile.roleID.ToString() : "N/A";
+                    //txtUserRole.Text = userProfile.roleID.HasValue ? userProfile.roleID.ToString() : "N/A";
 
                     // Gán giá trị cho ComboBox vai trò
                     cmbUserRole.SelectedItem = userProfile.roleID.HasValue ? userProfile.roleID.ToString() : null;

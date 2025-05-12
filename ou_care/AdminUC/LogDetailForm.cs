@@ -19,6 +19,22 @@ namespace ou_care.AdminUC
             InitializeComponent();
             this.log = log;
             LoadLogDetail();
+            this.SuspendLayout();            
+
+            // Close Button
+            var btnClose = new Button
+            {
+                Text = "Đóng",
+                Dock = DockStyle.Bottom,
+                Height = 40
+            };
+            btnClose.Click += btnClose_Click;
+
+            this.Controls.Add(btnClose);
+            this.Text = "Chi tiết log";
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.AutoSize = true;
+            this.ResumeLayout(false);
         }
 
         private void LoadLogDetail()
@@ -84,6 +100,51 @@ namespace ou_care.AdminUC
         private void LogDetailForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEntityType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEntityID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
